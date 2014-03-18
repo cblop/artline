@@ -1,0 +1,35 @@
+<div class="container-fluid">
+<br/>
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+      <!--
+      <ul class="cats">
+        <li ng-repeat="cat in level1" class="thumbnail">
+          <a href="#" ng-click="updateList(cat)">{{cat.node}}</a>
+        </li>
+      </ul>
+      -->
+  <div
+    data-angular-treeview="true"
+    data-tree-id="abc"
+    data-tree-model="level1"
+    data-node-id="node"
+    data-node-label="node"
+    data-node-children="children">
+    </div>
+
+    </div>
+    <div class="span2">
+      <!--Body content-->
+      <ul class="artists">
+      	<li ng-repeat="artist in artists | filter:selectedNode.node" class = "b-thumbnail" ng-click="changeEvents('artists/' + artist.uri + '-timeline.json')">
+      		{{artist.name}}
+      	</li>
+      </ul>
+    </div>
+    <div class ="span8">
+    <div id="timeline-embed" timeline-js></div>
+    </div>
+  </div>
+</div>
